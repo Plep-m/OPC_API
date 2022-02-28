@@ -17,3 +17,5 @@ DB_Name=DatabaseName</br>
 test using postman is the best option exemple : </br>
 http://localhost:8090/api/city/CITYNAME
 
+Disclaimer : </br>
+this is a school project and the data aren't accurate yet
