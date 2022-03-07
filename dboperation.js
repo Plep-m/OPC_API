@@ -28,9 +28,21 @@ async function getShop(ville_name) {
         console.log(error);
         }
 }
-
+async function getArticle(name){
+  try {
+    let pool = await sql.connect(config);
+    let product = await pool.request()
+    .input('input_parameter',sql.VarChar(500),name)
+    .query("Select * From Articles where Name like '%' + @input_parameter + '%'");
+    return product.recordset;
+  }
+  catch (error){
+    console.log(error)
+  }
+}
 
 module.exports = {
     getCity : getCity,
-    getShop : getShop
+    getShop : getShop,
+    getArticle : getArticle
 }

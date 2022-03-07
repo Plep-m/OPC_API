@@ -33,7 +33,11 @@ router.route('/shop/:ville_name').get((request,response)=>{
         response.json(result);
     })
 });
-
+router.route('/articles/:name').get((request,response)=>{
+    dboperation.getArticle(request.params.name).then(result => {
+        response.json(result);
+    })
+});
 var port = process.env.PORT || 8090;
 app.listen(port);
 console.log('OPC running on port ' + port);
