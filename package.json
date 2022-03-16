@@ -15,9 +15,12 @@
     "mssql": "^6.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "electron": "^17.1.2"
   },
   "keywords": [],
   "author": "Paul M",
   "license": "ISC"
 }
+
+
