@@ -25,7 +25,13 @@ def w2b():
     link = url + ask
     r = requests.get(link,verify=False)
     recived = r.json()
+    lenght = len(recived)
+    print(f"you can buy this "+{lenght}+"similar items in your city ")
     print (recived)
+    print(f"this is the list of all shop where your item should be available")
+    
+
+
 
 def main():
     w2b()
