@@ -8,7 +8,7 @@ async  function  getCity(name) {
       let  pool = await  sql.connect(config);
       let  product = await  pool.request()
       .input('input_parameter', sql.VarChar(50), name)
-      .query("SELECT * from Villes where Nom = '%' + @input_parameter + '%'");
+      .query("SELECT * Villes where Nom = '%' + @input_parameter + '%'");
       return  product.recordsets;
     }
     catch (error) {
